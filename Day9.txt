@@ -1,0 +1,38 @@
+State Elevation 
+general Recap
+Components, State, Props, Hooks, Router
+better ReactJs general comprehension 
+
+
+Example part 
+
+when you want to share informaion between sibling components , th only way is to elevate the peice of information and store it in their nearest common ancestor , in this way they're going to receive it as a prop and they can also be passed a way of changing it from inside themselves
+
+import {useState} from "react"
+
+const [selected, setSelected] = useState(null)
+
+<MyTable selected={selected} setSelected={setSelected}/>
+<MyAlert selected={selected}/>
+
+
+this.props.setSelected(e.target.innerText)
+
+const MyAlert = ({selected}) => (...)
+
+Prop Drilling 
+
+General recap 
+
+create component 
+TopNavbar.jsx
+
+BottomFooter.jsx
+
+{new Date().getFullYear()}
+
+HomePage.jsx
+
+{this.prop.children}
+
+
