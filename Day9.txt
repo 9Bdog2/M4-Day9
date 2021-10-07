@@ -35,4 +35,8 @@ HomePage.jsx
 
 {this.prop.children}
 
+const history = useHistory()
+//this is a shortcut using a hook 
+..history.push("/data")..
+
 
